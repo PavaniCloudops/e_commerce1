@@ -69,12 +69,15 @@ a.product:hover {
 #stan {
     float: right;
     position: relative;
-    top: -75px;
-    padding: 0px;
+    /* top: -75px; */
+    /* padding: 0px; */
     margin-top: 0px;
     margin-right: 5%;
     margin-bottom: 0px;
     margin-left: 0px;
+    bottom: 0px;
+    right: 13px;
+    padding: 10px;
 }
 
 #search {
@@ -91,7 +94,7 @@ a.product:hover {
 
 .column {
     float: left;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .row:after {
@@ -101,11 +104,14 @@ a.product:hover {
 }
 
 .nav {
-    width: 25%;
+    width: 30%;
+    padding:10px 0px;
+    background-color: olivedrab;
 }
 
 .main {
     width: 500px;
+    padding: 0px 10px 0px 15px;
 }
 
 .footer {
