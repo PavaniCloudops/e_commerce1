@@ -79,47 +79,47 @@ app.get('/products', (req, res) => {
 });
 
 // product by SKU
-// app.get('/product/:sku', (req, res) => {
-//     if(mongoConnected) {
-//         // optionally slow this down
-//         const delay = process.env.GO_SLOW || 0;
-//         setTimeout(() => {
-//         collection.findOne({sku: req.params.sku}).then((product) => {
-//             req.log.info('product', product);
-//             if(product) {
-//                 res.json(product);
-//             } else {
-//                 res.status(404).send('SKU not found');
-//             }
-//         }).catch((e) => {
-//             req.log.error('ERROR', e);
-//             res.status(500).send(e);
-//         });
-//         }, delay);
-//     } else {
-//         req.log.error('database not available');
-//         res.status(500).send('database not available');
-//     }
-// });
+app.get('/product/:sku', (req, res) => {
+    if(mongoConnected) {
+        // optionally slow this down
+        const delay = process.env.GO_SLOW || 0;
+        setTimeout(() => {
+        collection.findOne({sku: req.params.sku}).then((product) => {
+            req.log.info('product', product);
+            if(product) {
+                res.json(product);
+            } else {
+                res.status(404).send('SKU not found');
+            }
+        }).catch((e) => {
+            req.log.error('ERROR', e);
+            res.status(500).send(e);
+        });
+        }, delay);
+    } else {
+        req.log.error('database not available');
+        res.status(500).send('database not available');
+    }
+});
 
 // products in a category
-// app.get('/products/:cat', (req, res) => {
-//     if(mongoConnected) {
-//         collection.find({ categories: req.params.cat }).sort({ name: 1 }).toArray().then((products) => {
-//             if(products) {
-//                 res.json(products);
-//             } else {
-//                 res.status(404).send('No products for ' + req.params.cat);
-//             }
-//         }).catch((e) => {
-//             req.log.error('ERROR', e);
-//             res.status(500).send(e);
-//         });
-//     } else {
-//         req.log.error('database not available');
-//         res.status(500).send('database not avaiable');
-//     }
-// });
+app.get('/products/:cat', (req, res) => {
+    if(mongoConnected) {
+        collection.find({ categories: req.params.cat }).sort({ name: 1 }).toArray().then((products) => {
+            if(products) {
+                res.json(products);
+            } else {
+                res.status(404).send('No products for ' + req.params.cat);
+            }
+        }).catch((e) => {
+            req.log.error('ERROR', e);
+            res.status(500).send(e);
+        });
+    } else {
+        req.log.error('database not available');
+        res.status(500).send('database not avaiable');
+    }
+});
 
 // all categories
 app.get('/categories', (req, res) => {
