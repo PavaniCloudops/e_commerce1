@@ -19,6 +19,7 @@
     <span id="stan">
         <img id ="mainimage" src="/media/stan.png"/>
     </span>
+
     <span id="search">
         <form>
             <input type="text" size="20" ng-model="data.searchText"/>
@@ -48,6 +49,8 @@
                     </ul>
                 </li>
             </ul>
+            <h3><a href="invoice">Invoice</a></h3>
+            <div><a href="invoice" onclick="myFunction()">Click me</a></div>
         </div>
 
         <!-- main display area -->
@@ -67,6 +70,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.js"></script>
 <script src="/js/auto-complete.js"></script>
 <script src="/js/controller.js"></script>
+<script src="/js/app.js"></script>
 <script type="text/javascript">
     angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
 </script>
