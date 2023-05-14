@@ -111,19 +111,19 @@
         }
 
         // unique id for cart etc
-        function getUniqueid() {
-            return new Promise((resolve, reject) => {
-            $http({
-                url: '/api/user/uniqueid',
-                method: 'GET'
-            }).then((res) => {
-                resolve(res.data.uuid);
-            }).catch((e) => {
-                console.log('ERROR', e);
-                reject(e);
-            });
-        });
-        }
+        // function getUniqueid() {
+        //     return new Promise((resolve, reject) => {
+        //     $http({
+        //         url: '/api/user/uniqueid',
+        //         method: 'GET'
+        //     }).then((res) => {
+        //         resolve(res.data.uuid);
+        //     }).catch((e) => {
+        //         console.log('ERROR', e);
+        //         reject(e);
+        //     });
+        // });
+        // }
 
         // init
         console.log('shopform starting...');
