@@ -486,15 +486,15 @@
                 currentUser.user = $scope.data.user;
                 currentUser.uniqueid = $scope.data.user.name;
                 // login OK move cart across
-                $http({
-                    url: '/api/cart/rename/' + oldId + '/' + $scope.data.user.name,
-                    method: 'GET'
-                }).then((res) => {
-                    console.log('cart moved OK');
-                }).catch((e) => {
-                    // 404 is OK as cart might not exist yet
-                    console.log('ERROR', e);
-                });
+                // $http({
+                //     url: '/api/cart/rename/' + oldId + '/' + $scope.data.user.name,
+                //     method: 'GET'
+                // }).then((res) => {
+                //     console.log('cart moved OK');
+                // }).catch((e) => {
+                //     // 404 is OK as cart might not exist yet
+                //     console.log('ERROR', e);
+                // });
                 loadHistory(currentUser.user.name);
             }).catch((e) => {
                 console.log('ERROR', e);

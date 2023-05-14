@@ -193,7 +193,8 @@ a.cont:hover {
 
 /* splash */
 div.splash {
-    background-image: url("/media/stan3.png");
+    /* background-image: url("/media/graph.png"); */
+    background-image: url("../images/stan3.jpg"); 
     background-repeat: no-repeat;
     padding: 5px;
     margin: 0px;
