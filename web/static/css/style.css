@@ -195,9 +195,11 @@ a.cont:hover {
 div.splash {
     /* background-image: url("/media/graph.png"); */
     background-image: url("../images/stan3.jpg"); 
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+    width: 750px;
     padding: 5px;
     margin: 0px;
+    color:yellow;
 }
 
 div a:link {
