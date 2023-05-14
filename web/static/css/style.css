@@ -199,8 +199,9 @@ div.splash {
     margin: 0px;
 }
 
-h4 a:link {
+div a:link {
     color: cyan;
     text-decoration: none;
+    margin-left: 25px;
 }
 
